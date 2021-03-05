@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính số ngày của tháng</title>
+    <style>
+        form{
+            margin-left: 50%;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <input type="text" id="thang" name="Month">
+    <input type="button" onclick="month()" value="Tính số ngày"/>
+    <p id="A"></p>
+    <script>
+        function month() {
+            var x = +document.getElementById("thang").value
+            switch (x) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    document.getElementById("A").innerHTML = "Tháng " + x + " có 31 ngày";
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    document.getElementById("A").innerHTML = "Tháng " + x + " có 30 ngày";
+                    break;
+                case 2:
+                    document.getElementById("A").innerHTML = "Tháng có 28 hoặc 29 ngày";
+                    break;
+                default:
+                    document.getElementById("A").innerText = "Không có tháng này"
+
+
+            }
+        }
+    </script>
+</form>
+</body>
+</html>
