@@ -3,22 +3,36 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Bảng cửu chương</title>
+    <title>Số nguyên tố</title>
 </head>
 <body>
 <script>
-    let X = "<table border='1' width='100%' cellspacing='0' cellpadding='10' >";
-    let i, j;
-    var a = i * j;
-    for (i = 1; i <= 9; i++) {
-        X = X + "<tr>";
-        for (j = 2; j <= 9; j++) {
-            X = X + "<td>" + j + "x" + i + "=" + i * j + "</td>";
+    var a = prompt("Số lượng SNT muốn in:");
+    var b;
+    for (b = 0; b < a; b++) {
+        for (let n = 2; n < 50; n++) {
+            var Z = 0;
+            var x;
+            if (n < 2) {
+                x = false;
+            } else if (n == 2) {
+                x = true;
+            } else if (n % 2 == 0) {
+                x = false;
+            } else {
+                for (var i = 3; i < Math.sqrt(n); i+=2) {
+                    if (n % i == 0) {
+                        x = false;
+                        break;
+                    }
+                }
+            }
+            if (x == true) {
+                Z++;
+                document.write(n + "<br/>");
+            }
         }
-        X = X + "</tr>";
     }
-    X = X + "</table>";
-    document.write(X)
 </script>
 </body>
 </html>
