@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Thực hành Tạo và thao tác với mảng</title>
+</head>
+<body>
+<input type="text" id="a">
+<input type="button" onclick="b()" value="Add">
+<input type="button" onclick="c()" value="Display">
+<p id="d"></p>
+<script>
+    let x = 0;
+    let X = Array();
+
+    function b() {
+        X[x] = document.getElementById("a").value;
+        alert("Giá trị: " + X[x] + " thêm vào vị trí " + x + " của mảng");
+        x++;
+        document.getElementById("a").value = "";
+    }
+
+    function c() {
+        let e = "<hr>";
+        for (var i = 0; i < X.length; i++) {
+            e = e + "vị trí " + i + " = " + X[i] + "<br/>";
+        }
+        document.getElementById("d").innerHTML = e;
+    }
+</script>
+</body>
+</html>
