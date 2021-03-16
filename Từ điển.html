@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+
+</head>
+<body>
+<input type="text" id="a">
+<input type="button" onclick="b()" value="Translate">
+<p id="c"></p>
+<script>
+    var tiengviet = ["một", "hai", "ba", "bốn", 'năm'];
+    var tienganh = ["one", "too", "three", "four", "five"];
+    function b() {
+        var x = document.getElementById("a").value;
+        for (let i = 0; i < tiengviet.length; i++) {
+            if (x == tiengviet[i]) {
+                document.getElementById("c").innerHTML = tienganh[i];
+            }
+            if (x == tienganh[i]) {
+                document.getElementById("c").innerHTML = tiengviet[i];
+            }
+        }
+    }
+</script>
+</body>
+</html>
