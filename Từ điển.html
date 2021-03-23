@@ -12,16 +12,26 @@
 <script>
     var tiengviet = ["một", "hai", "ba", "bốn", 'năm'];
     var tienganh = ["one", "too", "three", "four", "five"];
+
     function b() {
         var x = document.getElementById("a").value;
         for (let i = 0; i < tiengviet.length; i++) {
             if (x == tiengviet[i]) {
                 document.getElementById("c").innerHTML = tienganh[i];
+                break;
+            }else {
+                document.getElementById("c").innerHTML="k tìm thấy"
             }
             if (x == tienganh[i]) {
                 document.getElementById("c").innerHTML = tiengviet[i];
+                break;
+            }else {
+                document.getElementById("c").innerHTML="ko tim tháy"
             }
+
         }
+
+
     }
 </script>
 </body>
