@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+<body>
+<p id="g"></p>
+<script>
+    // //Bài 1
+    // var x = [1, 4, 64, 234, 6, 5, 3, 1, 23, 34, 534];
+    // let count = 0;
+    // for (let i = 0; i < x.length; i++) {
+    //     if (x[i] >= 10) {
+    //         count++;
+    //     }
+    // }
+    // alert(" có " + count + " số lớn hơn 10");
+    // //Bài 2
+    // var x = [1, 4, 64, 234, 6, 5, 3, 1, 23, 34, 534];
+    // let max = x[0];
+    // let a = 0
+    // for (let i = 1; i < x.length; i++) {
+    //     if (max < x[i]) {
+    //         max = x[i];
+    //         a = i;
+    //     }
+    // }
+    // document.write("số lớn nhất là " + max + " ở vị trí" + a)
+    //Bài 3
+    // var x = [1, 4, 64, 234, 6, 5, 3, 1, 23, 34,4];
+    // let max = x[0];
+    // let tong = 0;
+    // let a = 0;
+    // for (let i = 0; i < x.length; i++) {
+    //     if (max < x[i]) {
+    //         max = x[i];
+    //     }
+    //     a++;
+    //     tong += x[i];
+    // }document.write("số lớn nhất là "+max+"<br>");
+    // document.write("tbc: " + tong/a)
+    //Bài 4
+    // var x = [1, 4, 64, 234, 6, 5, 3, 1, 23, 34, 534];
+    // let a = 0;
+    // let b = x.length - 1;
+    // while (a < b) {
+    //     let y = x[a];
+    //     x[a] = x[b];
+    //     x[b] = y;
+    //     a++;
+    //     b--;
+    // }document.write(x)
+    //Bài 5
+    // var x=[-2,4,-4,43,1,-43,-32,43,-433,-3];
+    // let a=0;
+    // for (let i=0;i<x.length;i++){
+    //     if (x[i]<0){
+    //         a++;
+    //     }
+    // }document.write(a)
+    //Bài 6
+    // debugger
+    // var x=[-2,4,-4,43,1,-43,-32,43,-433,-3];
+    // let a=prompt();
+    // for (let i=0;i<x.length;i++){
+    //     if (a==x[i]){
+    //         document.getElementById("g").innerHTML=a+ " là phần tử của mảng";
+    //         break;
+    //     }else {
+    //         document.getElementById("g").innerHTML="ko thuộc"
+    //     }
+    // }
+    //Bài 7
+    // function kiemtra() {
+    //     var x = [-2, 4, -4, 43, 1, -43, -32, 43, -433, -3];
+    //     let a = prompt();
+    //     let check = false;
+    //     for (let i = 0; i < x.length; i++) {
+    //         if (a == x[i]) {
+    //             x.splice(i, 1);
+    //             check = true;
+    //         }
+    //     }
+    //     if (check) {
+    //         document.getElementById("g").innerHTML = a + " bị xóa " + x;
+    //     } else {
+    //         document.getElementById("g").innerHTML = a + " ko thuộc mảng";
+    //     }
+    // }
+    // kiemtra()
+    //Bài 8
+    // var x = [-2, 4, -4, 43, 1, -43, -32, 43, -433, -3];
+    // x.sort(function (a,b){return a-b}); //tăng dần
+    // x.sort(function (a,b){return b-a});//giảm dần
+    // document.getElementById("g").innerHTML= x
+    //Bài 9
+    // var a=[1,23,4,3,4,1,7,6,5,9];
+    // var b=[7,4,66,4,6,3,5,6,9,8];
+    // var c=a.concat(b);
+    // document.getElementById("g").innerText=c;
+
+
+</script>
+</body>
+</html>
