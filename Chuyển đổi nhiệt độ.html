@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+<body>
+<h1>Temperature Converter</h1><br>
+<label>Fahrenheit: <input type="number" id="nhap"></label>
+<p>Celicius:<span id="xuat"></span></p>
+<input type="button" onclick="change()" value="Change">
+<script>
+    function change() {
+        var x = parseFloat(document.getElementById("nhap").value);
+        document.getElementById("xuat").innerHTML=(x-32)/1.8;
+    }
+
+</script>
+</body>
+</html>
