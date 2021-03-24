@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+<body>
+<p id="a"></p>
+<script>
+    function isPrime(n) {
+        var flag = true;
+        if (n < 2) {
+            flag = false;
+        } else {
+            for (var i = 2; i < n - 1; i++) {
+                if (n % 2 == 0) {
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        if (flag = true) {
+            document.getElementById("a").innerHTML = n + " là SNT";
+        } else {
+            document.getElementById("a").innerHTML = n + "ko phải SNT";
+        }
+    }
+</script>
+</body>
+</html>
