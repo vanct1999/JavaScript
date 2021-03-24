@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+<body>
+<input type="text" id="nhap">
+<input type="button" onclick="footToMeter()" value="footToMeter">
+<input type="button" onclick="meterToFoot()" value="meterToFoot">
+<p id="change"></p>
+<script>
+    function footToMeter() {
+        let foot = parseFloat(document.getElementById("nhap").value);
+        document.getElementById("change").innerHTML = foot * 0.305;
+    }
+
+    function meterToFoot() {
+        let met = parseFloat(document.getElementById("nhap").value);
+        document.getElementById("change").innerHTML = met * 3.279;
+    }
+</script>
+</body>
+</html>
