@@ -1,66 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Game puzzle</title>
-
+    <title></title>
 </head>
 <body>
-<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;">
+<canvas id="funny" height="750px" width="1500px" style="border: 1px solid black;"></canvas>
     <script>
         let circles = [];
-        function Circle(x, y, radius) {
-            this.x = x;
-            this.y = y;
-            this.radius = radius;
-            this.speed = 1
+        class Circle {
+            x;
+            y;
+            radius;
+            constructor(x,y,radius) {
+                this.x = x;
+                this.y = y;
+                this.radius = radius;
+                this.speed = 1
+            }
         }
         function getRandomHex() {
             return Math.floor(Math.random() * 255);
         }
-
         function getRandomColor() {
             var red = getRandomHex();
             var green = getRandomHex();
             var blue = getRandomHex();
             return "rgb(" + red + "," + blue + "," + green + ")";
         }
-
-        function createCircle() {
-            var ctx = document.getElementById("myCanvas").getContext("2d");
-            var radius = Math.floor(Math.random() * 80);
-            var color = getRandomColor();
-            var x = Math.random() * window.innerWidth;
-            var y = Math.random() * window.innerHeight;
+        function creatCircle() {
+            var a = document.getElementById("funny").getContext("2d");//getContext("2d") dànhv cho vẽ hình như hình hộp, hình tròn
+            var radius = Math.floor(Math.random() * 80);//Math.floor làm tròn số khi gọi, random kích thước
+            var color = getRandomColor();//random màu
+            var x = Math.random() * window.innerWidth;//random vị trí
+            var y = Math.random() * window.innerHeight;//
             var circle = new Circle(x, y, radius);
             circles.push(circle);
-            ctx.beginPath();
-            ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
-            ctx.fillStyle = color;
-            ctx.fill();
+            a.beginPath();
+            a.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+            a.fillStyle = color;
+            a.fill();
         }
-        function createMultipleCircle() {
-            var ctx = document.getElementById("myCanvas").getContext("2d");
-            ctx.clearRect(0, 0, 1368, 768);
-            for (var i = 0; i < 30; i++) {
-                createCircle();
+        function creatMultiCircle() {
+            var a = document.getElementById("funny").getContext("2d");
+            a.clearRect(0, 0, 1500, 750);
+            for (let i = 0; i < 40; i++) {
+                creatCircle();
             }
         }
-        createMultipleCircle();
+        creatMultiCircle();
         function Move() {
-            var ctx = document.getElementById("myCanvas").getContext("2d");
-            ctx.clearRect(0, 0, 1368, 768);
-            var newX = Math.floor(Math.random()*50) - 25;
-            var newY = Math.floor(Math.random()*50) - 25;
+            var a = document.getElementById("funny").getContext("2d");
+            a.clearRect(0, 0, 1500, 750);
+            var newX = Math.floor(Math.random() * 50) - 25;
+            var newY = Math.floor(Math.random() * 50) - 25;
             console.log(newX, newY)
             for (let i = 0; i < circles.length; i++) {
                 circles[i].x += newX;
                 circles[i].y += newY;
-                ctx.beginPath();
-                ctx.arc(circles[i].x, circles[i].y, circles[i].radius, 0, 2 * Math.PI);
+                a.beginPath();
+                a.arc(circles[i].x, circles[i].y, circles[i].radius, 0, 2 * Math.PI);
                 var color = getRandomColor();
-                ctx.fillStyle = color;
-                ctx.fill();
+                a.fillStyle = color;
+                a.fill();
             }
         }
         setInterval(Move, 50);
